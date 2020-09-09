@@ -1,0 +1,22 @@
+Primeiros Passos
+
+# Criar o Ambiente Virtualenv
+Pode-se utilizar os comandos mkvirtualenv, ou pode-se utilizar o criador do
+próprio Pycharm
+
+# Desativar Ambiente Virtual
+comando = "deactivate"
+
+# Ativar Ambiente Virtual
+comando = "workon + nome do A.V"
+
+# Criar um arquivo Requirements
+comando = pip freeze > requirements.txt
+
+# Criar projeto
+comando = django-admin startproject <nome_do_projeto> .
+Foi criado a pasta do projeto + o arquivo manage.py
+O ponto no final é indicado para que não seja criado um subdiretorio
+
+
+
