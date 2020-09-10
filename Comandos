@@ -18,5 +18,18 @@ comando = django-admin startproject <nome_do_projeto> .
 Foi criado a pasta do projeto + o arquivo manage.py
 O ponto no final é indicado para que não seja criado um subdiretorio
 
+# Arquivo manage.py
+O arquivo que vamos utilizar para executar comandos do framework Django.
 
+# Arquivo Settings.py
+Encontra-se as configurações gerais para o framework Django, dentre elas, a
+configuração de idioma (LANGUAGE_CODE = 'pt-br'
 
+# Criando uma aplicação Django e conhecendo sua estrutura
+django-admin startapp <nome_da_applicação(app)>
+
+# Instalando a aplicação "Core" em settings.py
+Incluir 'core', em INSTALLED_APPS
+
+# Templates, adicionar configurações
+Em 'DIRS': [] adicionar a 'templates'
