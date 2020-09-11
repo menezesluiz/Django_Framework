@@ -25,6 +25,9 @@ O arquivo que vamos utilizar para executar comandos do framework Django.
 Encontra-se as configurações gerais para o framework Django, dentre elas, a
 configuração de idioma (LANGUAGE_CODE = 'pt-br'
 
+# Comando dir
+Lista todos os arquivos contidos dentro do diretório
+
 # Criando uma aplicação Django e conhecendo sua estrutura
 django-admin startapp <nome_da_applicação(app)>
 
@@ -33,3 +36,39 @@ Incluir 'core', em INSTALLED_APPS
 
 # Templates, adicionar configurações
 Em 'DIRS': [] adicionar a 'templates'
+
+
+# Projetos x Aplicações
+Quando trabalhamos com o Django Framework devemos levar em conta a forma de
+trabalho do mesmo que possui um projeto que engloba o
+todos e aplicações plugáveis.
+Ou seja, em um projeto Django, podemos ter várias aplicações, cada uma com sua
+tarefa específica, e estas aplicações depois de criadas podem ser
+utilizadas por outros projetos.
+
+# Padrão MTV do Django
+Models = Gerencia os modelos de Dados (Ex: Cadastrar produtos)
+Templates = Interface
+Views = ? (Ainda a ser estudado)
+
+# Startar o projeto Python - Comando
+python manage.py runserver
+
+# Criando Views
+As views são sempre criadas nas aplicações e não nos projetos, no meu caso,
+foi criado na aplicação 'core'
+- Deve-se criar as views, no arquivo 'views.py',
+- Em seguida deve-se criar uma rota no arquivo 'urls.py',
+Obs: O arquivo 'urls.py' por padrão, só existe no projeto, não na aplicação
+- Para se criar a rota no arquivo 'urls.py', devo importa-la.
+"from <nome_aplicação(core).views> import <nome_views_criadas(index, contato)>"
+- Adicionar em urlpatterns os path das views
+Obs: no caso do index, como é a view "raiz", o path fica:
+path('', index)
+path('contato', contato)
+- Não é recomendado ao desenvolvedor Django, deixar as rotas no arquvio
+'urls.py' do projeto. Pois se tiver um projeto com várias aplicações, o arquivo
+ficará cheio de rotas, facilmente de se perder.
+- O segredo é criar um arquivo 'urls.py' dentro da aplicação 'core', direcionar
+via (path('', include('core.urls'))) no arquivo 'urls.py' do projeto.
+
