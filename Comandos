@@ -72,3 +72,7 @@ ficará cheio de rotas, facilmente de se perder.
 - O segredo é criar um arquivo 'urls.py' dentro da aplicação 'core', direcionar
 via (path('', include('core.urls'))) no arquivo 'urls.py' do projeto.
 
+
+# Templates
+- Vamos criar um novo diretório no diretório de nossa aplicação (core)
+
